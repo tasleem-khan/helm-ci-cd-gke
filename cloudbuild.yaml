@@ -9,7 +9,7 @@ steps:
   - |
     # Build and push images
     skaffold build --file-output=/workspace/artifacts.json \
-                   --default-repo=${_REGION}-docker.pkg.dev/$PROJECT_ID/helm-cicd-repo \
+                   --default-repo=us-central1-docker.pkg.dev/$PROJECT_ID/helm-cicd-repo \
                    --push=true
 - name: 'google/cloud-sdk:latest'
   entrypoint: 'sh'
@@ -17,7 +17,7 @@ steps:
   - -xe
   - -c
   - |
-    gcloud config set deploy/region ${_REGION}
+    gcloud config set deploy/region us-central1
     sed -i s/PROJECT_ID/$PROJECT_ID/g deploy/*
     gcloud deploy apply --file deploy/pipeline.yaml
     gcloud deploy apply --file deploy/dev.yaml
