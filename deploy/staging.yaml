@@ -6,4 +6,4 @@ metadata:
   labels: {}
 description: staging
 gke:
-  cluster: projects/tasleem-project-trial-project/locations/us-central1-c/clusters/cluster-2
+  cluster: projects/tasleem-dev-project/locations/us-central1-c/clusters/cluster-2
