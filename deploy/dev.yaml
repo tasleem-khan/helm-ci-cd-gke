@@ -6,4 +6,4 @@ metadata:
   labels: {}
 description: dev
 gke:
-  cluster: projects/tasleem-project-trial-project/locations/us-central1/clusters/cluster-1
+  cluster: projects/tasleem-project-trial-project/locations/us-central1-c/clusters/cluster-1
